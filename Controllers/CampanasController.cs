@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PortalCampanas.Models;
+using System.Linq; // IMPORTANTE
 
 namespace PortalCampanas.Controllers
 {
@@ -14,6 +15,17 @@ namespace PortalCampanas.Controllers
         public IActionResult Index()
         {
             return View(campanas);
+        }
+
+        // 🔥 MÉTODO DETALLE (ESTO TE FALTABA)
+        public IActionResult Detalle(int id)
+        {
+            var campana = campanas.FirstOrDefault(c => c.Id == id);
+
+            if (campana == null)
+                return NotFound();
+
+            return View(campana);
         }
     }
 }

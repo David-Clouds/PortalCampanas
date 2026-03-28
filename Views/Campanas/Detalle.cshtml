@@ -1,0 +1,21 @@
+@model PortalCampanas.Models.Campana
+
+<h2>Detalle de Campaña</h2>
+
+<div style="background:white; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+
+    <h3>@Model.Nombre</h3>
+
+    <p><strong>Categoría:</strong> @Model.Categoria</p>
+    <p><strong>Estado:</strong> @Model.Estado</p>
+    <p><strong>Canal:</strong> @Model.Canal</p>
+    <p><strong>Descuento:</strong> @Model.DescuentoPct %</p>
+    <p><strong>Fecha Inicio:</strong> @Model.FechaInicio.ToShortDateString()</p>
+    <p><strong>Fecha Fin:</strong> @Model.FechaFin.ToShortDateString()</p>
+    <p><strong>Descripción:</strong> @Model.Descripcion</p>
+
+    <a href="/Campanas" style="background:#6c757d; color:white; padding:8px 12px; border-radius:5px; text-decoration:none;">
+        Volver
+    </a>
+
+</div>
