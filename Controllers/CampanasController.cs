@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PortalCampanas.Models;
+using System.Linq; // IMPORTANTE
 
 namespace PortalCampanas.Controllers
 {
@@ -11,9 +12,29 @@ namespace PortalCampanas.Controllers
             new Campana { Id = 2, Nombre = "Ropa Verano", Categoria="Moda", Estado="Próxima", Canal="App", DescuentoPct=15, FechaInicio=DateTime.Now.AddDays(5), FechaFin=DateTime.Now.AddDays(15), Descripcion="Ofertas verano" }
         };
 
-        public IActionResult Index()
+        // 🔥 INDEX CON FILTROS
+        public IActionResult Index(string categoria, string estado)
         {
-            return View(campanas);
+            var lista = campanas.AsQueryable();
+
+            if (!string.IsNullOrEmpty(categoria))
+                lista = lista.Where(c => c.Categoria == categoria);
+
+            if (!string.IsNullOrEmpty(estado))
+                lista = lista.Where(c => c.Estado == estado);
+
+            return View(lista.ToList());
+        }
+
+        // 🔥 DETALLE (YA LO TENÍAS)
+        public IActionResult Detalle(int id)
+        {
+            var campana = campanas.FirstOrDefault(c => c.Id == id);
+
+            if (campana == null)
+                return NotFound();
+
+            return View(campana);
         }
     }
 }
