@@ -1,6 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 using PortalCampanas.Models;
+<<<<<<< HEAD
 using System.Linq;
+=======
+using System.Linq; // IMPORTANTE
+>>>>>>> feature/detalle-campana
 
 namespace PortalCampanas.Controllers
 {
@@ -51,6 +55,17 @@ namespace PortalCampanas.Controllers
             ViewBag.Promedio = promedio;
 
             return View();
+        }
+
+        // 🔥 MÉTODO DETALLE (ESTO TE FALTABA)
+        public IActionResult Detalle(int id)
+        {
+            var campana = campanas.FirstOrDefault(c => c.Id == id);
+
+            if (campana == null)
+                return NotFound();
+
+            return View(campana);
         }
     }
 }
