@@ -1,10 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using PortalCampanas.Models;
-<<<<<<< HEAD
-using System.Linq; // IMPORTANTE
-=======
 using System.Linq;
->>>>>>> feature/resumen-campanas
 
 namespace PortalCampanas.Controllers
 {
@@ -16,11 +12,7 @@ namespace PortalCampanas.Controllers
             new Campana { Id = 2, Nombre = "Ropa Verano", Categoria="Moda", Estado="Próxima", Canal="App", DescuentoPct=15, FechaInicio=DateTime.Now.AddDays(5), FechaFin=DateTime.Now.AddDays(15), Descripcion="Ofertas verano" }
         };
 
-<<<<<<< HEAD
-        // 🔥 INDEX CON FILTROS
-=======
-
->>>>>>> feature/resumen-campanas
+        // INDEX CON FILTROS
         public IActionResult Index(string categoria, string estado)
         {
             var lista = campanas.AsQueryable();
@@ -34,11 +26,7 @@ namespace PortalCampanas.Controllers
             return View(lista.ToList());
         }
 
-<<<<<<< HEAD
-        // 🔥 DETALLE (YA LO TENÍAS)
-=======
-
->>>>>>> feature/resumen-campanas
+        // DETALLE
         public IActionResult Detalle(int id)
         {
             var campana = campanas.FirstOrDefault(c => c.Id == id);
@@ -47,11 +35,9 @@ namespace PortalCampanas.Controllers
                 return NotFound();
 
             return View(campana);
-<<<<<<< HEAD
-=======
         }
 
-
+        // RESUMEN
         public IActionResult Resumen()
         {
             var total = campanas.Count;
@@ -65,7 +51,6 @@ namespace PortalCampanas.Controllers
             ViewBag.Promedio = promedio;
 
             return View();
->>>>>>> feature/resumen-campanas
         }
     }
 }
