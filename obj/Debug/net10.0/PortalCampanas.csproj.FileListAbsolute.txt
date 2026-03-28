@@ -1,3 +1,11 @@
+C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.AssemblyInfoInputs.cache
+C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.AssemblyInfo.cs
+C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.csproj.CoreCompileInputs.cache
+C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.RazorAssemblyInfo.cache
+C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.RazorAssemblyInfo.cs
 C:\Users\Asus\PortalCampanas\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\Asus\PortalCampanas\bin\Debug\net10.0\appsettings.json
 C:\Users\Asus\PortalCampanas\bin\Debug\net10.0\PortalCampanas.staticwebassets.runtime.json
@@ -7,14 +15,6 @@ C:\Users\Asus\PortalCampanas\bin\Debug\net10.0\PortalCampanas.deps.json
 C:\Users\Asus\PortalCampanas\bin\Debug\net10.0\PortalCampanas.runtimeconfig.json
 C:\Users\Asus\PortalCampanas\bin\Debug\net10.0\PortalCampanas.dll
 C:\Users\Asus\PortalCampanas\bin\Debug\net10.0\PortalCampanas.pdb
-C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\rpswa.dswa.cache.json
-C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.AssemblyInfoInputs.cache
-C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.AssemblyInfo.cs
-C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.csproj.CoreCompileInputs.cache
-C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.RazorAssemblyInfo.cache
-C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\PortalCampanas.RazorAssemblyInfo.cs
 C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\Asus\PortalCampanas\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json

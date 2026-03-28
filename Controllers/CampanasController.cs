@@ -12,7 +12,7 @@ namespace PortalCampanas.Controllers
             new Campana { Id = 2, Nombre = "Ropa Verano", Categoria="Moda", Estado="Próxima", Canal="App", DescuentoPct=15, FechaInicio=DateTime.Now.AddDays(5), FechaFin=DateTime.Now.AddDays(15), Descripcion="Ofertas verano" }
         };
 
-
+        // INDEX CON FILTROS
         public IActionResult Index(string categoria, string estado)
         {
             var lista = campanas.AsQueryable();
@@ -26,7 +26,7 @@ namespace PortalCampanas.Controllers
             return View(lista.ToList());
         }
 
-
+        // DETALLE
         public IActionResult Detalle(int id)
         {
             var campana = campanas.FirstOrDefault(c => c.Id == id);
@@ -37,7 +37,7 @@ namespace PortalCampanas.Controllers
             return View(campana);
         }
 
-
+        // RESUMEN
         public IActionResult Resumen()
         {
             var total = campanas.Count;

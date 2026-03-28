@@ -2,6 +2,27 @@
 
 <h2>Listado de Campañas</h2>
 
+
+<form method="get" style="margin-bottom:20px;">
+
+    <label><strong>Categoría:</strong></label>
+    <select name="categoria">
+        <option value="">Todas</option>
+        <option value="Electro">Electro</option>
+        <option value="Moda">Moda</option>
+    </select>
+
+    <label style="margin-left:15px;"><strong>Estado:</strong></label>
+    <select name="estado">
+        <option value="">Todos</option>
+        <option value="Vigente">Vigente</option>
+        <option value="Próxima">Próxima</option>
+    </select>
+
+    <button type="submit" class="btn-filtrar">Filtrar</button>
+
+</form>
+
 <table class="tabla">
     <thead>
         <tr>
@@ -10,7 +31,7 @@
             <th>Estado</th>
             <th>Canal</th>
             <th>Descuento</th>
-            <th>Acciones</th> <!-- NUEVO -->
+            <th>Acciones</th>
         </tr>
     </thead>
 
@@ -24,7 +45,6 @@
                 <td>@c.Canal</td>
                 <td>@c.DescuentoPct %</td>
 
-                <!-- BOTÓN -->
                 <td>
                     <a href="/Campanas/Detalle/@c.Id" class="btn-detalle">
                         Ver Detalle
@@ -69,5 +89,19 @@
 
     .btn-detalle:hover {
         background-color: #0056b3;
+    }
+
+  
+    .btn-filtrar {
+        margin-left: 15px;
+        padding: 6px 12px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .btn-filtrar:hover {
+        background-color: #218838;
     }
 </style>
