@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Portal Campañas</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body style="background-color:#f4f6f9;">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand fw-bold" asp-controller="Campanas" asp-action="Index">
+                📊 Portal Campañas
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Campanas" asp-action="Index">
+                            Listado
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Campanas" asp-action="Resumen">
+                            Resumen
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container mt-4">
+    <main role="main">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="bg-dark text-white text-center mt-5 p-3">
+    <p class="mb-0">© 2026 - Portal de Campañas Comerciales</p>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

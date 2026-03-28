@@ -1,0 +1,73 @@
+@model List<PortalCampanas.Models.Campana>
+
+<h2>Listado de Campañas</h2>
+
+<table class="tabla">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Estado</th>
+            <th>Canal</th>
+            <th>Descuento</th>
+            <th>Acciones</th> <!-- NUEVO -->
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Nombre</td>
+                <td>@c.Categoria</td>
+                <td>@c.Estado</td>
+                <td>@c.Canal</td>
+                <td>@c.DescuentoPct %</td>
+
+                <!-- BOTÓN -->
+                <td>
+                    <a href="/Campanas/Detalle/@c.Id" class="btn-detalle">
+                        Ver Detalle
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .tabla {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .tabla th {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+    }
+
+    .tabla td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .tabla tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    .btn-detalle {
+        background-color: #007bff;
+        color: white;
+        padding: 6px 12px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+    .btn-detalle:hover {
+        background-color: #0056b3;
+    }
+</style>
